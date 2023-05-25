@@ -1,0 +1,22 @@
+server:
+  port: 8081
+main-page:
+  url: "http://localhost:8081"
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 30000
+spring:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/marketplace
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
